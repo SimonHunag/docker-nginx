@@ -10,8 +10,8 @@ RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 #定义工作目录
 ENV NGINX_BASE /etc/nginx/
 
-COPY ./nginx.conf  $NGINX_BASE/
-COPY ./hosts $NGINX_BASE/conf.d
+COPY nginx.conf  /etc/nginx/
+COPY hosts /etc/nginx/conf.d
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
